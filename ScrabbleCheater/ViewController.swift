@@ -8,12 +8,18 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    var scrabble = Scrabble()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
     }
 
-
+    @IBAction func resetButtonTapped(_ sender: UIButton) {
+        scrabble.resetLetters()
+        scrabble.fetchRandomLetters()
+    }
+    
 }
 
