@@ -13,8 +13,8 @@
 		CB26BB8A266FD621000029F5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB26BB88266FD621000029F5 /* Main.storyboard */; };
 		CB26BB8C266FD623000029F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB26BB8B266FD623000029F5 /* Assets.xcassets */; };
 		CB26BB8F266FD623000029F5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB26BB8D266FD623000029F5 /* LaunchScreen.storyboard */; };
-		CB26BB97266FD8BC000029F5 /* dictionary.txt in Resources */ = {isa = PBXBuildFile; fileRef = CB26BB96266FD8BC000029F5 /* dictionary.txt */; };
 		CB26BB99266FF54F000029F5 /* Scrabble.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB26BB98266FF54F000029F5 /* Scrabble.swift */; };
+		CB26BB9B26711069000029F5 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB26BB9A26711069000029F5 /* NetworkManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,8 +26,8 @@
 		CB26BB8B266FD623000029F5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CB26BB8E266FD623000029F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CB26BB90266FD623000029F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CB26BB96266FD8BC000029F5 /* dictionary.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dictionary.txt; sourceTree = "<group>"; };
 		CB26BB98266FF54F000029F5 /* Scrabble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scrabble.swift; sourceTree = "<group>"; };
+		CB26BB9A26711069000029F5 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,7 +60,6 @@
 		CB26BB81266FD621000029F5 /* ScrabbleCheater */ = {
 			isa = PBXGroup;
 			children = (
-				CB26BB96266FD8BC000029F5 /* dictionary.txt */,
 				CB26BB82266FD621000029F5 /* AppDelegate.swift */,
 				CB26BB84266FD621000029F5 /* SceneDelegate.swift */,
 				CB26BB86266FD621000029F5 /* ViewController.swift */,
@@ -69,6 +68,7 @@
 				CB26BB8D266FD623000029F5 /* LaunchScreen.storyboard */,
 				CB26BB90266FD623000029F5 /* Info.plist */,
 				CB26BB98266FF54F000029F5 /* Scrabble.swift */,
+				CB26BB9A26711069000029F5 /* NetworkManager.swift */,
 			);
 			path = ScrabbleCheater;
 			sourceTree = "<group>";
@@ -132,7 +132,6 @@
 			files = (
 				CB26BB8F266FD623000029F5 /* LaunchScreen.storyboard in Resources */,
 				CB26BB8C266FD623000029F5 /* Assets.xcassets in Resources */,
-				CB26BB97266FD8BC000029F5 /* dictionary.txt in Resources */,
 				CB26BB8A266FD621000029F5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -146,6 +145,7 @@
 			files = (
 				CB26BB87266FD621000029F5 /* ViewController.swift in Sources */,
 				CB26BB83266FD621000029F5 /* AppDelegate.swift in Sources */,
+				CB26BB9B26711069000029F5 /* NetworkManager.swift in Sources */,
 				CB26BB85266FD621000029F5 /* SceneDelegate.swift in Sources */,
 				CB26BB99266FF54F000029F5 /* Scrabble.swift in Sources */,
 			);

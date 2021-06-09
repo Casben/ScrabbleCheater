@@ -13,12 +13,17 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        configure()
+    }
+    
+    func configure() {
+        scrabble.fetchWordList()
     }
 
     @IBAction func resetButtonTapped(_ sender: UIButton) {
         scrabble.resetLetters()
         scrabble.fetchRandomLetters()
+        
     }
     
 }

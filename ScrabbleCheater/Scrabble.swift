@@ -7,12 +7,13 @@
 
 import Foundation
 
-struct Scrabble {
+class Scrabble {
     let bag = ["A":9, "B":2, "C":2, "D":4, "E":12, "F":2, "G":3, "H":2, "I":9, "J":1, "K":1, "L":4, "M":2, "N":6, "O":8, "P":2, "Q":1, "R":6, "S":4, "T":6, "U":4, "V":2, "W":2, "X":1, "Y":2, "Z":1]
     
     var randomLetters = Array<String>()
+    var dictionary = [String]()
     
-    mutating func fetchRandomLetters() {
+     func fetchRandomLetters() {
         var tempBag = bag
         let possibleLetters = bag.keys
         
@@ -34,7 +35,13 @@ struct Scrabble {
         print(randomLetters)
     }
     
-    mutating func resetLetters() {
+     func resetLetters() {
         randomLetters.removeAll()
+    }
+    
+     func fetchWordList() {
+        NetworkManager.shared.fetchWordList { [unowned self] words in
+            self.dictionary = Array(words)
+        }
     }
 }
