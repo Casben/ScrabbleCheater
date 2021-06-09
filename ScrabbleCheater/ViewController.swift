@@ -10,8 +10,18 @@ import UIKit
 class ViewController: UIViewController {
     
     var scrabble = Scrabble()
+    
+    var answers = [String: Int]() {
+        didSet {
+            for answer in answers {
+                answersLabel.text! += answer.key + " = \(answer.value)" + "\n"
+            }
+        }
+    }
 
     @IBOutlet weak var selectedLettersLabel: UILabel!
+    @IBOutlet weak var answersLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configure()
@@ -32,10 +42,13 @@ class ViewController: UIViewController {
         scrabble.resetGame()
         scrabble.fetchRandomLetters()
         updateSelectedLettersLabel()
+        answersLabel.text = ""
     }
     
     @IBAction func cheatButtonTapped(_ sender: UIButton) {
-        scrabble.matchWords()
+        scrabble.matchWords { [unowned self] answers in
+            self.answers = answers
+        }
     }
     
 }

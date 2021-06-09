@@ -24,14 +24,14 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Letters" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yOh-j9-P4L">
-                                <rect key="frame" x="173.5" y="94" width="67" height="24"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <rect key="frame" x="176.5" y="94" width="61.5" height="21.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="letters go here!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Ck-LA-E14">
-                                <rect key="frame" x="149.5" y="126" width="115.5" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="152" y="123.5" width="110" height="19.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -42,13 +42,21 @@
                                     <action selector="cheatButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2o5-4K-1PT"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j5S-D3-6Br">
+                                <rect key="frame" x="207" y="151" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="sUL-Oe-Q7H" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0fA-PL-3BA"/>
                             <constraint firstItem="7Ck-LA-E14" firstAttribute="top" secondItem="yOh-j9-P4L" secondAttribute="bottom" constant="8" symbolic="YES" id="1XP-dK-zLN"/>
+                            <constraint firstItem="j5S-D3-6Br" firstAttribute="top" secondItem="7Ck-LA-E14" secondAttribute="bottom" constant="8" symbolic="YES" id="8qZ-5l-GDD"/>
                             <constraint firstItem="yOh-j9-P4L" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="APD-0f-tgj"/>
+                            <constraint firstItem="j5S-D3-6Br" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="CGH-sD-3yr"/>
                             <constraint firstItem="sUL-Oe-Q7H" firstAttribute="top" secondItem="96D-kp-ejs" secondAttribute="bottom" constant="8" symbolic="YES" id="Tbi-p6-n1S"/>
                             <constraint firstItem="7Ck-LA-E14" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ckq-PV-BF5"/>
                             <constraint firstItem="96D-kp-ejs" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dP7-be-C5M"/>
@@ -57,6 +65,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="answersLabel" destination="j5S-D3-6Br" id="eZx-TR-raf"/>
                         <outlet property="selectedLettersLabel" destination="7Ck-LA-E14" id="iCK-KT-fEz"/>
                     </connections>
                 </viewController>

@@ -12,7 +12,7 @@ class Scrabble {
     
     var randomLetters = Array<String>()
     var dictionary = Set<String>()
-    var possibleWords = [String: Int]()
+    
     
      func fetchRandomLetters() {
         var tempBag = bag
@@ -38,18 +38,16 @@ class Scrabble {
     
      func resetGame() {
         randomLetters.removeAll()
-        possibleWords.removeAll()
     }
     
      func fetchWordList() {
         NetworkManager.shared.fetchWordList { [unowned self] words in
             self.dictionary = words
-            print(dictionary)
-            
         }
     }
     
-    func matchWords() {
+    func matchWords(completion: @escaping ([String: Int]) -> Void) {
+        var possibleWords = [String: Int]()
         var dictionaryWord = ""
         var selectedLetters = randomLetters.joined().lowercased()
        
@@ -58,21 +56,17 @@ class Scrabble {
                 if selectedLetters.contains(letter.lowercased()) {
                     dictionaryWord += String(letter)
                     selectedLetters.remove(at: selectedLetters.firstIndex(of: letter)!)
-                    print(dictionaryWord)
                 }
             }
             
             if dictionaryWord == word {
                 let totalPoints = calculatePoints(forWord: word)
                 possibleWords[word] = totalPoints
-                print(totalPoints)
             }
             dictionaryWord = ""
             selectedLetters = randomLetters.joined().lowercased()
         }
-        
-        print("possible words are:")
-        print(possibleWords)
+        completion(possibleWords)
     }
     
     func calculatePoints(forWord word: String) -> Int {
