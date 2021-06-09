@@ -21,6 +21,7 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var selectedLettersLabel: UILabel!
     @IBOutlet weak var answersLabel: UILabel!
+    @IBOutlet weak var cheatButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,12 +44,14 @@ class ViewController: UIViewController {
         scrabble.fetchRandomLetters()
         updateSelectedLettersLabel()
         answersLabel.text = ""
+        cheatButton.isEnabled = true
     }
     
     @IBAction func cheatButtonTapped(_ sender: UIButton) {
         scrabble.matchWords { [unowned self] answers in
             self.answers = answers
         }
+        cheatButton.isEnabled = false
     }
     
 }

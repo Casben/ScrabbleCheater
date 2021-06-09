@@ -66,6 +66,7 @@
                     </view>
                     <connections>
                         <outlet property="answersLabel" destination="j5S-D3-6Br" id="eZx-TR-raf"/>
+                        <outlet property="cheatButton" destination="96D-kp-ejs" id="wSk-I9-hsq"/>
                         <outlet property="selectedLettersLabel" destination="7Ck-LA-E14" id="iCK-KT-fEz"/>
                     </connections>
                 </viewController>
