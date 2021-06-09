@@ -17,24 +17,52 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sUL-Oe-Q7H">
-                                <rect key="frame" x="154.5" y="433" width="105" height="30"/>
+                                <rect key="frame" x="154.5" y="832" width="105" height="30"/>
                                 <state key="normal" title="Get new letters"/>
                                 <connections>
                                     <action selector="resetButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="t4V-lo-HLk"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Letters" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yOh-j9-P4L">
+                                <rect key="frame" x="173.5" y="94" width="67" height="24"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="letters go here!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Ck-LA-E14">
+                                <rect key="frame" x="149.5" y="126" width="115.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="96D-kp-ejs">
+                                <rect key="frame" x="186.5" y="794" width="41" height="30"/>
+                                <state key="normal" title="Cheat"/>
+                                <connections>
+                                    <action selector="cheatButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2o5-4K-1PT"/>
                                 </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="sUL-Oe-Q7H" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jOV-HQ-MeG"/>
-                            <constraint firstItem="sUL-Oe-Q7H" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="w4g-ZQ-JWr"/>
+                            <constraint firstItem="sUL-Oe-Q7H" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0fA-PL-3BA"/>
+                            <constraint firstItem="7Ck-LA-E14" firstAttribute="top" secondItem="yOh-j9-P4L" secondAttribute="bottom" constant="8" symbolic="YES" id="1XP-dK-zLN"/>
+                            <constraint firstItem="yOh-j9-P4L" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="APD-0f-tgj"/>
+                            <constraint firstItem="sUL-Oe-Q7H" firstAttribute="top" secondItem="96D-kp-ejs" secondAttribute="bottom" constant="8" symbolic="YES" id="Tbi-p6-n1S"/>
+                            <constraint firstItem="7Ck-LA-E14" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ckq-PV-BF5"/>
+                            <constraint firstItem="96D-kp-ejs" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dP7-be-C5M"/>
+                            <constraint firstItem="sUL-Oe-Q7H" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="nyk-Yo-Ute"/>
+                            <constraint firstItem="yOh-j9-P4L" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="pjm-2I-cXr"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="selectedLettersLabel" destination="7Ck-LA-E14" id="iCK-KT-fEz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="139" y="88"/>
+            <point key="canvasLocation" x="137.68115942028987" y="87.723214285714278"/>
         </scene>
     </scenes>
     <resources>

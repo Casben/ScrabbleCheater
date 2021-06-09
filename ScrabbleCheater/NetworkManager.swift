@@ -23,9 +23,8 @@ struct NetworkManager {
                     dictionary.insert(String(line))
                 }
             }
+            print(dictionary.count)
             completion(dictionary)
         }
-       
-        
     }
 }
